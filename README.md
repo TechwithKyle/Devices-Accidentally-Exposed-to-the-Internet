@@ -63,7 +63,7 @@ DeviceLogonEvents
 | where RemoteIP has_any(RemoteIPsInQuestion)
 ```
 
-<Query no results>
+### <Query no results>
 
 ---
 
@@ -79,7 +79,7 @@ DeviceLogonEvents
 | summarize count ()
 ```
 
-<Query no results>
+### <Query no results>
 
 ---
 
