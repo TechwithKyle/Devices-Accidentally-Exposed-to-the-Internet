@@ -17,7 +17,7 @@ focus on "kylesvm" device for attempted brute force attacks.
 
 ## Timeline Summary and Findings 
 
-### Kylesvm has been internet facing for one month (2025-06-29T23:37:40.9873809Z - 2025-07-26T07:57:45.8297573Z): 
+Kylesvm has been internet facing for one month (2025-06-29T23:37:40.9873809Z - 2025-07-26T07:57:45.8297573Z): 
 
 **Query used to locate events:**
 
@@ -33,7 +33,7 @@ Last Internet facing time: 2025-07-26T07:57:45.8297573Z
 
 ---
 
-### Several Bad Actors have been discovered attemtping to log into the target machine.
+Several Bad Actors have been discovered attemtping to log into the target machine.
 
 **Query used to locate events:**
 
@@ -50,7 +50,7 @@ DeviceLogonEvents
 
 ---
 
-### The top 5 most failed login attempts IP addresses have not been able to successfully login to my VM
+The top 5 most failed login attempts IP addresses have not been able to successfully login to my VM
 
 **Query used to locate events:**
 
@@ -67,7 +67,7 @@ DeviceLogonEvents
 
 ---
 
-### There were no successful brute force attempts on this account. It is unlikely that a one time password guess would succeed.
+There were no successful brute force attempts on this account. It is unlikely that a one time password guess would succeed.
 
 **Query used to locate events:**
 
@@ -83,7 +83,7 @@ DeviceLogonEvents
 
 ---
 
-### Checked all of the successful IP addresses for the user to see if any were unusual or from an unexpected location. All were normal.
+Checked all of the successful IP addresses for the user to see if any were unusual or from an unexpected location. All were normal.
 
 **Query used to locate events:**
 
@@ -101,31 +101,31 @@ DeviceLogonEvents
  
 ## Summary
 
-### Though this device was exposed to the internet and clear that brute force attempts have taken place, there were no successful brute force attempts or unauthorized access from the legitimate account “shocker”.
+Though this device was exposed to the internet and clear that brute force attempts have taken place, there were no successful brute force attempts or unauthorized access from the legitimate account “shocker”.
 
 ---
 
 ## Relevant MITRE ATT&CK TTPs:
 
-### - T1078 – Valid Accounts
+- T1078 – Valid Accounts
 > Activity analyzed to verify if any logons were made with legitimate accounts like “shocker”.
 
-### - T1110 – Brute Force
+- T1110 – Brute Force
 > Multiple failed logon attempts from various remote IPs suggest brute force login attempts.
 
-### - T1021.001 – Remote Services: Remote Desktop Protocol
+- T1021.001 – Remote Services: Remote Desktop Protocol
 > RemoteInteractive logon attempts from external IPs suggest attackers tried accessing via RDP.
 
-### - T1046 – Network Service Scanning *(inferred)*
+- T1046 – Network Service Scanning *(inferred)*
 > The VM being internet-facing likely made it a target for automated scanning.
 
-### - T1589.001 – Gather Victim Identity Information: Credentials
+- T1589.001 – Gather Victim Identity Information: Credentials
 > Failed logon attempts could indicate attackers trying to enumerate or guess credentials.
 
 ---
 
 ## Response Actions:
 
-### ● Hardened the NSG attached to account “shocker” to allow only RDP traffic from specific endpoints (No public internet access)
-### ● Implemented Account Lockout Policy
-### ● Implemented MFA
+- Hardened the NSG attached to account “shocker” to allow only RDP traffic from specific endpoints (No public internet access)
+- Implemented Account Lockout Policy
+- Implemented MFA
